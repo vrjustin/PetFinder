@@ -49,6 +49,7 @@
 		1A1238BF28D87205001740F0 /* PetFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1238C328D87205001740F0 /* PetFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITests.swift; sourceTree = "<group>"; };
 		1A1238C528D87205001740F0 /* PetFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1A1238D228D87249001740F0 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		1A12389628D87204001740F0 = {
 			isa = PBXGroup;
 			children = (
+				1A1238D228D87249001740F0 /* Readme.md */,
 				1A1238A128D87204001740F0 /* PetFinder */,
 				1A1238B828D87205001740F0 /* PetFinderTests */,
 				1A1238C228D87205001740F0 /* PetFinderUITests */,

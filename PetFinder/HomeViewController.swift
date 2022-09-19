@@ -12,8 +12,14 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.systemPink
+        
+        PetfinderAPIManager.shared.fetchAnimalTypes(completion: { animal_types in
+            print(animal_types)
+        })
+        
     }
 
+    
 
 }
 

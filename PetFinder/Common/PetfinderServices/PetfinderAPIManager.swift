@@ -66,4 +66,15 @@ class PetfinderAPIManager {
         
     }
     
+    func fetchAnimalTypes(completion: @escaping (AnimalTypes?) -> Void) {
+        let url = "https://api.petfinder.com/v2/types"
+        sessionManager.request(url)
+            .responseDecodable(of: AnimalTypes.self) { response in
+                guard let animalTypes = response.value else {
+                    return completion(nil)
+                }
+                completion(animalTypes)
+            }
+    }
+    
 }

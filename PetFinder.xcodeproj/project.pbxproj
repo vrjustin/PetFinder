@@ -146,6 +146,7 @@
 		1A1238D328D87D5A001740F0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1A4753F628D89C47007A1F94 /* PetfinderServices */,
 				1A1238D428D87D72001740F0 /* Utils */,
 			);
 			path = Common;
@@ -175,6 +176,13 @@
 				1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		1A4753F628D89C47007A1F94 /* PetfinderServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PetfinderServices;
 			sourceTree = "<group>";
 		};
 		220E0878A5E3881619EC1E34 /* Frameworks */ = {

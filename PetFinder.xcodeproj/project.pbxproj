@@ -14,6 +14,7 @@
 		1A1238BA28D87205001740F0 /* PetFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1238B928D87205001740F0 /* PetFinderTests.swift */; };
 		1A1238C428D87205001740F0 /* PetFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1238C328D87205001740F0 /* PetFinderUITests.swift */; };
 		1A1238C628D87205001740F0 /* PetFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1238C528D87205001740F0 /* PetFinderUITestsLaunchTests.swift */; };
+		1A67B89128D881B1004D0923 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1A67B89028D881B1004D0923 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		1A1238C328D87205001740F0 /* PetFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITests.swift; sourceTree = "<group>"; };
 		1A1238C528D87205001740F0 /* PetFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1A1238D228D87249001740F0 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		1A67B89028D881B1004D0923 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				1A1238D328D87D5A001740F0 /* Common */,
 				1A1238DA28D87F04001740F0 /* Resources */,
 				1A1238A228D87204001740F0 /* AppDelegate.swift */,
+				1A67B89028D881B1004D0923 /* Podfile */,
 			);
 			path = PetFinder;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A67B89128D881B1004D0923 /* Podfile in Resources */,
 				1A1238AF28D87205001740F0 /* LaunchScreen.storyboard in Resources */,
 				1A1238AC28D87205001740F0 /* Assets.xcassets in Resources */,
 			);

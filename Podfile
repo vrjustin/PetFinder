@@ -6,6 +6,7 @@ target 'PetFinder' do
   use_frameworks!
 
   # Pods for PetFinder
+  pod 'ReachabilitySwift'
 
   target 'PetFinderTests' do
     inherit! :search_paths

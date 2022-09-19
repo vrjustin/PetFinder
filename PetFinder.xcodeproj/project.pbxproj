@@ -97,11 +97,10 @@
 		1A1238A128D87204001740F0 /* PetFinder */ = {
 			isa = PBXGroup;
 			children = (
+				1A1238D928D87EE6001740F0 /* ViewControllers */,
+				1A1238D328D87D5A001740F0 /* Common */,
+				1A1238DA28D87F04001740F0 /* Resources */,
 				1A1238A228D87204001740F0 /* AppDelegate.swift */,
-				1A1238A628D87204001740F0 /* HomeViewController.swift */,
-				1A1238AB28D87205001740F0 /* Assets.xcassets */,
-				1A1238AD28D87205001740F0 /* LaunchScreen.storyboard */,
-				1A1238B028D87205001740F0 /* Info.plist */,
 			);
 			path = PetFinder;
 			sourceTree = "<group>";
@@ -121,6 +120,39 @@
 				1A1238C528D87205001740F0 /* PetFinderUITestsLaunchTests.swift */,
 			);
 			path = PetFinderUITests;
+			sourceTree = "<group>";
+		};
+		1A1238D328D87D5A001740F0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1A1238D428D87D72001740F0 /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1A1238D428D87D72001740F0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1A1238D928D87EE6001740F0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A1238A628D87204001740F0 /* HomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1A1238DA28D87F04001740F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A1238B028D87205001740F0 /* Info.plist */,
+				1A1238AB28D87205001740F0 /* Assets.xcassets */,
+				1A1238AD28D87205001740F0 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

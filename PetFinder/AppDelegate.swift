@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupReachability()
         
+        PetfinderAPIManager.shared.fetchAccessToken(accessCode: "WhatIsThisCode") { isSuccess in
+          if !isSuccess {
+            print("Error fetching access token")
+          }
+        }
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground

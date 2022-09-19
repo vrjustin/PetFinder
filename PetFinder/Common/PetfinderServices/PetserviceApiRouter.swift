@@ -30,11 +30,41 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
+import Alamofire
 
-enum PetfinderServiceConstants {
-    static let clientID = Bundle.main.infoDictionary?["CLIENT_ID"] as! String
-    static let clientSecret = Bundle.main.infoDictionary?["CLIENT_SECRET"] as! String
-    static let grantType = "client_credentials"
-    static let authorizeURL = "https://api.petfinder.com/v2/oauth2/token"
+enum PetserviceApiRouter {
+  case fetchAccessToken(String)
+
+  var baseURL: String {
+    switch self {
+    case .fetchAccessToken:
+      return "https://api.petfinder.com/v2"
+    }
+  }
+
+  var path: String {
+    switch self {
+    case .fetchAccessToken:
+      return "/oauth2/token"
+    }
+  }
+
+  var method: HTTPMethod {
+    switch self {
+    case .fetchAccessToken:
+      return .post
+    }
+  }
+
+  var parameters: [String: String]? {
+    switch self {
+    case .fetchAccessToken(let accessCode):
+      return [
+        "client_id": PetfinderServiceConstants.clientID,
+        "client_secret": PetfinderServiceConstants.clientSecret,
+        "code": accessCode
+      ]
+    }
+  }
 }

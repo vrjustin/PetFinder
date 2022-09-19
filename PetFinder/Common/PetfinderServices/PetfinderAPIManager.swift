@@ -31,10 +31,39 @@
 /// THE SOFTWARE.
 
 import Foundation
+import Alamofire
 
-enum PetfinderServiceConstants {
-    static let clientID = Bundle.main.infoDictionary?["CLIENT_ID"] as! String
-    static let clientSecret = Bundle.main.infoDictionary?["CLIENT_SECRET"] as! String
-    static let grantType = "client_credentials"
-    static let authorizeURL = "https://api.petfinder.com/v2/oauth2/token"
+class PetfinderAPIManager {
+    static let shared = PetfinderAPIManager()
+    let sessionManager: Session = {
+        let configuration = URLSessionConfiguration.af.default
+        configuration.timeoutIntervalForRequest = 30
+        return Session(configuration: configuration)
+    }()
+    
+    func fetchAccessToken(accessCode: String, completion: @escaping (Bool) -> Void) {
+        let headers: HTTPHeaders = [
+            "Accept": "application/json"
+        ]
+        let parameters = [
+            "client_id": PetfinderServiceConstants.clientID,
+            "client_secret": PetfinderServiceConstants.clientSecret,
+            "grant_type": "client_credentials"
+        ]
+        
+        sessionManager.request(
+            PetfinderServiceConstants.authorizeURL,
+            method: .post,
+            parameters: parameters,
+            headers: headers)
+            .responseDecodable(of: PetfinderAccessToken.self) { response in
+              guard let tokn = response.value else {
+                return completion(false)
+              }
+              TokenManager.shared.saveAccessToken(accessToken: tokn)
+              completion(true)
+            }
+        
+        
+    }
 }

@@ -41,7 +41,7 @@ class PetfinderAPIManager {
         return Session(configuration: configuration)
     }()
     
-    func fetchAccessToken(accessCode: String, completion: @escaping (Bool) -> Void) {
+    func fetchAccessToken(completion: @escaping (Bool) -> Void) {
         let headers: HTTPHeaders = [
             "Accept": "application/json"
         ]
@@ -64,6 +64,17 @@ class PetfinderAPIManager {
               completion(true)
             }
         
-        
     }
+    
+    func fetchAnimalTypes(completion: @escaping (AnimalTypes?) -> Void) {
+        let url = "https://api.petfinder.com/v2/types"
+        sessionManager.request(url)
+            .responseDecodable(of: AnimalTypes.self) { response in
+                guard let animalTypes = response.value else {
+                    return completion(nil)
+                }
+                completion(animalTypes)
+            }
+    }
+    
 }

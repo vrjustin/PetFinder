@@ -13,16 +13,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.systemPink
         
-        PetfinderAPIManager.shared.fetchAccessToken(accessCode: "WhatIsThisCode") { [self] isSuccess in
-          if !isSuccess {
-            print("Error fetching access token")
-          }
-          navigationController?.popViewController(animated: true)
-        }
-
+        PetfinderAPIManager.shared.fetchAnimalTypes(completion: { animal_types in
+            print(animal_types)
+        })
         
     }
 
+    
 
 }
 

@@ -23,6 +23,7 @@
 		1A47541328D8AE38007A1F94 /* PetfinderServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47541028D8AE38007A1F94 /* PetfinderServiceConstants.swift */; };
 		1A47541928D8B119007A1F94 /* PetfinderAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47541628D8B119007A1F94 /* PetfinderAPIManager.swift */; };
 		1A47541A28D8B119007A1F94 /* PetserviceApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47541728D8B119007A1F94 /* PetserviceApiRouter.swift */; };
+		1A47542228D8CE3A007A1F94 /* AnimalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47542128D8CE3A007A1F94 /* AnimalTypes.swift */; };
 		1A67B89128D881B1004D0923 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1A67B89028D881B1004D0923 /* Podfile */; };
 		3C4579BFB8763A1A902B7DB6 /* Pods_PetFinder_PetFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA7BC98E53E6F20A0B648B5 /* Pods_PetFinder_PetFinderUITests.framework */; };
 		3E874C49BCAFE1D5DFCE2F22 /* Pods_PetFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D98B54577B50343194C207 /* Pods_PetFinderTests.framework */; };
@@ -67,6 +68,7 @@
 		1A47541028D8AE38007A1F94 /* PetfinderServiceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetfinderServiceConstants.swift; sourceTree = "<group>"; };
 		1A47541628D8B119007A1F94 /* PetfinderAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetfinderAPIManager.swift; sourceTree = "<group>"; };
 		1A47541728D8B119007A1F94 /* PetserviceApiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetserviceApiRouter.swift; sourceTree = "<group>"; };
+		1A47542128D8CE3A007A1F94 /* AnimalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTypes.swift; sourceTree = "<group>"; };
 		1A67B89028D881B1004D0923 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		27B9B209C27B02866B3EE0F9 /* Pods-PetFinder-PetFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder-PetFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder-PetFinderUITests/Pods-PetFinder-PetFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		65C1EAF82CB872156C9431E7 /* Pods-PetFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinderTests/Pods-PetFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		1A4753F928D8A74B007A1F94 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1A47542128D8CE3A007A1F94 /* AnimalTypes.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 			files = (
 				1A47541328D8AE38007A1F94 /* PetfinderServiceConstants.swift in Sources */,
 				1A47540928D8AD62007A1F94 /* SecureStore.swift in Sources */,
+				1A47542228D8CE3A007A1F94 /* AnimalTypes.swift in Sources */,
 				1A47541A28D8B119007A1F94 /* PetserviceApiRouter.swift in Sources */,
 				1A47540828D8AD62007A1F94 /* SecureStoreError.swift in Sources */,
 				1A47541128D8AE38007A1F94 /* PetfinderAccessToken.swift in Sources */,

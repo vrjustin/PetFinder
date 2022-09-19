@@ -490,6 +490,7 @@
 /* Begin XCBuildConfiguration section */
 		1A1238C728D87205001740F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -550,6 +551,7 @@
 		};
 		1A1238C828D87205001740F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

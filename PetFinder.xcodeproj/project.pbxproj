@@ -50,6 +50,7 @@
 		1A1238C328D87205001740F0 /* PetFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITests.swift; sourceTree = "<group>"; };
 		1A1238C528D87205001740F0 /* PetFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1A1238D228D87249001740F0 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PetfinderApiConfig.xcconfig; sourceTree = "<group>"; };
 		1A67B89028D881B1004D0923 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		27B9B209C27B02866B3EE0F9 /* Pods-PetFinder-PetFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder-PetFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder-PetFinderUITests/Pods-PetFinder-PetFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		65C1EAF82CB872156C9431E7 /* Pods-PetFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinderTests/Pods-PetFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +172,7 @@
 				1A1238B028D87205001740F0 /* Info.plist */,
 				1A1238AB28D87205001740F0 /* Assets.xcassets */,
 				1A1238AD28D87205001740F0 /* LaunchScreen.storyboard */,
+				1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -195,7 +197,6 @@
 				65C1EAF82CB872156C9431E7 /* Pods-PetFinderTests.debug.xcconfig */,
 				843876AAEA081379E7E13114 /* Pods-PetFinderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

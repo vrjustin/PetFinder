@@ -41,7 +41,7 @@ class PetfinderAPIManager {
         return Session(configuration: configuration)
     }()
     
-    func fetchAccessToken(accessCode: String, completion: @escaping (Bool) -> Void) {
+    func fetchAccessToken(completion: @escaping (Bool) -> Void) {
         let headers: HTTPHeaders = [
             "Accept": "application/json"
         ]
@@ -64,6 +64,6 @@ class PetfinderAPIManager {
               completion(true)
             }
         
-        
     }
+    
 }

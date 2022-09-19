@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupReachability()
         
-        PetfinderAPIManager.shared.fetchAccessToken(accessCode: "WhatIsThisCode") { isSuccess in
+        PetfinderAPIManager.shared.fetchAccessToken() { isSuccess in
           if !isSuccess {
             print("Error fetching access token")
           }

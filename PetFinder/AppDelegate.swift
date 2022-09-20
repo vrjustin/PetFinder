@@ -27,7 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = HomeViewController()
+        
+        let navController = UINavigationController(rootViewController: HomeViewController())
+        
+        window?.rootViewController = navController
         
         return true
     }
@@ -44,7 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Unable to start notifier")
         }
     }
-
+    
+    
     @objc func reachabilityChanged(note: Notification) {
       let reachability = note.object as! Reachability
 

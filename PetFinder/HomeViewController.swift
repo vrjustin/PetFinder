@@ -8,18 +8,25 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.systemPink
+        self.navigationItem.title = "HomeView"
         
-        PetfinderAPIManager.shared.fetchAnimalTypes(completion: { animal_types in
-            print(animal_types)
-        })
+        let mainlabel = UILabel(frame: CGRect(x: 100, y: 100, width: 200, height: 60))
+        mainlabel.backgroundColor = UIColor.systemPink
+        mainlabel.text = "Welcome to your new Pet!"
+        self.view.addSubview(mainlabel)
+        
+        mainlabel.translatesAutoresizingMaskIntoConstraints = false
+        let horizontalConstraint = NSLayoutConstraint(item: mainlabel, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+        let verticalConstraint = NSLayoutConstraint(item: mainlabel, attribute: .top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: .top, multiplier: 1, constant: 80)
+        let widthConstraint = NSLayoutConstraint(item: mainlabel, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 200)
+        let heightConstraint = NSLayoutConstraint(item: mainlabel, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 60)
+        NSLayoutConstraint.activate([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+
         
     }
-
-    
 
 }
 

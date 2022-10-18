@@ -16,6 +16,9 @@
 		1A1238C428D87205001740F0 /* PetFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1238C328D87205001740F0 /* PetFinderUITests.swift */; };
 		1A1238C628D87205001740F0 /* PetFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1238C528D87205001740F0 /* PetFinderUITestsLaunchTests.swift */; };
 		1A30C79728FEC72500FAB9C1 /* AnimalTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C79628FEC72500FAB9C1 /* AnimalTypeViewModel.swift */; };
+		1A30C79A28FED13000FAB9C1 /* AnimalTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C79928FED13000FAB9C1 /* AnimalTypeCell.swift */; };
+		1A30C79D28FED2B400FAB9C1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C79C28FED2B400FAB9C1 /* UIView+Extension.swift */; };
+		1A30C7A028FED52800FAB9C1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A30C79F28FED52800FAB9C1 /* SDWebImage */; };
 		1A47540828D8AD62007A1F94 /* SecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47540528D8AD62007A1F94 /* SecureStoreError.swift */; };
 		1A47540928D8AD62007A1F94 /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47540628D8AD62007A1F94 /* SecureStore.swift */; };
 		1A47540A28D8AD62007A1F94 /* SecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47540728D8AD62007A1F94 /* SecureStoreQueryable.swift */; };
@@ -61,6 +64,8 @@
 		1A1238C528D87205001740F0 /* PetFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1A1238D228D87249001740F0 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		1A30C79628FEC72500FAB9C1 /* AnimalTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTypeViewModel.swift; sourceTree = "<group>"; };
+		1A30C79928FED13000FAB9C1 /* AnimalTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTypeCell.swift; sourceTree = "<group>"; };
+		1A30C79C28FED2B400FAB9C1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PetfinderApiConfig.xcconfig; sourceTree = "<group>"; };
 		1A47540528D8AD62007A1F94 /* SecureStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
 		1A47540628D8AD62007A1F94 /* SecureStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
@@ -71,7 +76,7 @@
 		1A47541628D8B119007A1F94 /* PetfinderAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetfinderAPIManager.swift; sourceTree = "<group>"; };
 		1A47541728D8B119007A1F94 /* PetserviceApiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetserviceApiRouter.swift; sourceTree = "<group>"; };
 		1A47542128D8CE3A007A1F94 /* AnimalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTypes.swift; sourceTree = "<group>"; };
-		1A67B89028D881B1004D0923 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		1A67B89028D881B1004D0923 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		27B9B209C27B02866B3EE0F9 /* Pods-PetFinder-PetFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder-PetFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder-PetFinderUITests/Pods-PetFinder-PetFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		65C1EAF82CB872156C9431E7 /* Pods-PetFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinderTests/Pods-PetFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67D98B54577B50343194C207 /* Pods_PetFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A30C7A028FED52800FAB9C1 /* SDWebImage in Frameworks */,
 				15B35FA780458E4CB74C9542 /* Pods_PetFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +143,7 @@
 		1A1238A128D87204001740F0 /* PetFinder */ = {
 			isa = PBXGroup;
 			children = (
+				1A30C79828FED11F00FAB9C1 /* Views */,
 				1A30C79528FEC6E300FAB9C1 /* ViewModels */,
 				1A4753F928D8A74B007A1F94 /* Models */,
 				1A1238D928D87EE6001740F0 /* ViewControllers */,
@@ -168,6 +175,7 @@
 		1A1238D328D87D5A001740F0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1A30C79B28FED29D00FAB9C1 /* Extensions */,
 				1A4753F628D89C47007A1F94 /* PetfinderServices */,
 				1A1238D428D87D72001740F0 /* Utils */,
 			);
@@ -208,6 +216,22 @@
 				1A30C79628FEC72500FAB9C1 /* AnimalTypeViewModel.swift */,
 			);
 			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		1A30C79828FED11F00FAB9C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A30C79928FED13000FAB9C1 /* AnimalTypeCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1A30C79B28FED29D00FAB9C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1A30C79C28FED2B400FAB9C1 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1A4753F628D89C47007A1F94 /* PetfinderServices */ = {
@@ -288,6 +312,9 @@
 			dependencies = (
 			);
 			name = PetFinder;
+			packageProductDependencies = (
+				1A30C79F28FED52800FAB9C1 /* SDWebImage */,
+			);
 			productName = PetFinder;
 			productReference = 1A12389F28D87204001740F0 /* PetFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -363,6 +390,9 @@
 				Base,
 			);
 			mainGroup = 1A12389628D87204001740F0;
+			packageReferences = (
+				1A30C79E28FED52800FAB9C1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 1A1238A028D87204001740F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -517,9 +547,11 @@
 				1A47540828D8AD62007A1F94 /* SecureStoreError.swift in Sources */,
 				1A47541128D8AE38007A1F94 /* PetfinderAccessToken.swift in Sources */,
 				1A1238A728D87204001740F0 /* HomeViewController.swift in Sources */,
+				1A30C79D28FED2B400FAB9C1 /* UIView+Extension.swift in Sources */,
 				1A47541928D8B119007A1F94 /* PetfinderAPIManager.swift in Sources */,
 				1A47540A28D8AD62007A1F94 /* SecureStoreQueryable.swift in Sources */,
 				1A1238A328D87204001740F0 /* AppDelegate.swift in Sources */,
+				1A30C79A28FED13000FAB9C1 /* AnimalTypeCell.swift in Sources */,
 				1A47541228D8AE38007A1F94 /* TokenManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -860,6 +892,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A30C79E28FED52800FAB9C1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A30C79F28FED52800FAB9C1 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A30C79E28FED52800FAB9C1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A12389728D87204001740F0 /* Project object */;
 }

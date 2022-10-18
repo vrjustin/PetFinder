@@ -39,4 +39,8 @@ enum PetfinderServiceConstants {
     
     static let authorizeURL = "https://api.petfinder.com/v2/oauth2/token"
     static let getTypesURL = "https://api.petfinder.com/v2/types"
+    
+    static func getBreedsURLString(_ animalType: AnimalType) -> String {
+        return "\(getTypesURL)/\(animalType.name.lowercased())/breeds"
+    }
 }

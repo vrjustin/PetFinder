@@ -90,4 +90,30 @@ class PetfinderAPIManager {
             }
     }
     
+    func fetchBreedsForAnimal(_ animal: AnimalType, completion: @escaping ([Breed]?) -> Void) {
+        
+        guard let curToken = TokenManager.shared.fetchAccessToken() else {
+            completion(nil)
+            return
+        }
+        
+        let authHeader = "Bearer \(curToken)"
+        let headers: HTTPHeaders = [
+            "Authorization": authHeader
+        ]
+        
+        sessionManager.request(
+            PetfinderServiceConstants.getBreedsURLString(animal),
+            method: .get,
+            headers: headers)
+            .responseDecodable(of: Breeds.self) { response in
+                guard let animalBreeds = response.value else {
+                    return completion(nil)
+                }
+                completion(animalBreeds.breeds)
+            }
+        
+        
+    }
+    
 }

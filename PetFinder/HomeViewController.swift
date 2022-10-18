@@ -11,6 +11,22 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+        fetchAnimalTypes()
+    }
+    
+    // MARK: - API
+    
+    private func fetchAnimalTypes() {
+        print("Call the PetfinderAPIManager.shared.fetchAnimalTypes service now..")
+        PetfinderAPIManager.shared.fetchAnimalTypes { animalTypes in
+            print("Should have an array of Animal Types now, such as: Dog, Bird, Cat, Etc...")
+        }
+    }
+    
+    // MARK: - HELPERS
+    
+    private func setupUI() {
         self.navigationItem.title = "HomeView"
         
         let mainlabel = UILabel(frame: CGRect(x: 100, y: 100, width: 200, height: 60))
@@ -25,7 +41,6 @@ class HomeViewController: UIViewController {
         let heightConstraint = NSLayoutConstraint(item: mainlabel, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 60)
         NSLayoutConstraint.activate([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
 
-        
     }
 
 }

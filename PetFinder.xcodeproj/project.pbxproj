@@ -19,6 +19,8 @@
 		1A30C79A28FED13000FAB9C1 /* AnimalTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C79928FED13000FAB9C1 /* AnimalTypeCell.swift */; };
 		1A30C79D28FED2B400FAB9C1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C79C28FED2B400FAB9C1 /* UIView+Extension.swift */; };
 		1A30C7A028FED52800FAB9C1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A30C79F28FED52800FAB9C1 /* SDWebImage */; };
+		1A30C7A228FEEE8600FAB9C1 /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C7A128FEEE8600FAB9C1 /* BreedsViewController.swift */; };
+		1A30C7A428FEF2AD00FAB9C1 /* BreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C7A328FEF2AD00FAB9C1 /* BreedsViewModel.swift */; };
 		1A47540828D8AD62007A1F94 /* SecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47540528D8AD62007A1F94 /* SecureStoreError.swift */; };
 		1A47540928D8AD62007A1F94 /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47540628D8AD62007A1F94 /* SecureStore.swift */; };
 		1A47540A28D8AD62007A1F94 /* SecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47540728D8AD62007A1F94 /* SecureStoreQueryable.swift */; };
@@ -66,6 +68,8 @@
 		1A30C79628FEC72500FAB9C1 /* AnimalTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTypeViewModel.swift; sourceTree = "<group>"; };
 		1A30C79928FED13000FAB9C1 /* AnimalTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTypeCell.swift; sourceTree = "<group>"; };
 		1A30C79C28FED2B400FAB9C1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1A30C7A128FEEE8600FAB9C1 /* BreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewController.swift; sourceTree = "<group>"; };
+		1A30C7A328FEF2AD00FAB9C1 /* BreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModel.swift; sourceTree = "<group>"; };
 		1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PetfinderApiConfig.xcconfig; sourceTree = "<group>"; };
 		1A47540528D8AD62007A1F94 /* SecureStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
 		1A47540628D8AD62007A1F94 /* SecureStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1238A628D87204001740F0 /* HomeViewController.swift */,
+				1A30C7A128FEEE8600FAB9C1 /* BreedsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				1A30C79628FEC72500FAB9C1 /* AnimalTypeViewModel.swift */,
+				1A30C7A328FEF2AD00FAB9C1 /* BreedsViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -540,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A30C79728FEC72500FAB9C1 /* AnimalTypeViewModel.swift in Sources */,
+				1A30C7A428FEF2AD00FAB9C1 /* BreedsViewModel.swift in Sources */,
 				1A47541328D8AE38007A1F94 /* PetfinderServiceConstants.swift in Sources */,
 				1A47540928D8AD62007A1F94 /* SecureStore.swift in Sources */,
 				1A47542228D8CE3A007A1F94 /* AnimalTypes.swift in Sources */,
@@ -549,6 +556,7 @@
 				1A1238A728D87204001740F0 /* HomeViewController.swift in Sources */,
 				1A30C79D28FED2B400FAB9C1 /* UIView+Extension.swift in Sources */,
 				1A47541928D8B119007A1F94 /* PetfinderAPIManager.swift in Sources */,
+				1A30C7A228FEEE8600FAB9C1 /* BreedsViewController.swift in Sources */,
 				1A47540A28D8AD62007A1F94 /* SecureStoreQueryable.swift in Sources */,
 				1A1238A328D87204001740F0 /* AppDelegate.swift in Sources */,
 				1A30C79A28FED13000FAB9C1 /* AnimalTypeCell.swift in Sources */,

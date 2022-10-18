@@ -68,6 +68,8 @@ extension HomeViewController {
 
 extension HomeViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Did SelectRowAt: \(animalTypes[indexPath.row])")
+        //TODO: Remove this temp routing..Not sure what we'll do yet. but now we'll just work on the getBreeds stuff.
+        let controller = BreedsViewController(BreedsViewModel(animalTypes[indexPath.row]))
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

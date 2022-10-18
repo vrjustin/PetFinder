@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 class AnimalTypeCell: UITableViewCell {
     
     // MARK: - PROPERTIES
@@ -18,7 +17,7 @@ class AnimalTypeCell: UITableViewCell {
             configure()
         }
     }
-    
+        
     private let animalTypeImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -47,7 +46,7 @@ class AnimalTypeCell: UITableViewCell {
         contentView.addSubview(animalTypeImageView)
         animalTypeImageView.setDimensions(height: 48, width: 48)
         animalTypeImageView.layer.cornerRadius = 48 / 2
-        animalTypeImageView.centerY(inView: self)
+        animalTypeImageView.centerY(inView: self.contentView)
         animalTypeImageView.anchor(left: contentView.leftAnchor, paddingLeft: 8)
         
         contentView.addSubview(animalTypeLabel)

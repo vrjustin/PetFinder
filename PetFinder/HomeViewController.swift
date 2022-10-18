@@ -63,3 +63,11 @@ extension HomeViewController {
         return cell
     }
 }
+
+// MARK: - TableView Delegate
+
+extension HomeViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Did SelectRowAt: \(animalTypes[indexPath.row])")
+    }
+}

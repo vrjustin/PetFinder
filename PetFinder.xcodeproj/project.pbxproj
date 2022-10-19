@@ -12,9 +12,6 @@
 		1A1238A728D87204001740F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1238A628D87204001740F0 /* HomeViewController.swift */; };
 		1A1238AC28D87205001740F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1238AB28D87205001740F0 /* Assets.xcassets */; };
 		1A1238AF28D87205001740F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1238AD28D87205001740F0 /* LaunchScreen.storyboard */; };
-		1A1238BA28D87205001740F0 /* PetFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1238B928D87205001740F0 /* PetFinderTests.swift */; };
-		1A1238C428D87205001740F0 /* PetFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1238C328D87205001740F0 /* PetFinderUITests.swift */; };
-		1A1238C628D87205001740F0 /* PetFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1238C528D87205001740F0 /* PetFinderUITestsLaunchTests.swift */; };
 		1A30C79728FEC72500FAB9C1 /* AnimalTypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C79628FEC72500FAB9C1 /* AnimalTypeViewModel.swift */; };
 		1A30C79A28FED13000FAB9C1 /* AnimalTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C79928FED13000FAB9C1 /* AnimalTypeCell.swift */; };
 		1A30C79D28FED2B400FAB9C1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A30C79C28FED2B400FAB9C1 /* UIView+Extension.swift */; };
@@ -33,19 +30,11 @@
 		1A47541A28D8B119007A1F94 /* PetserviceApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47541728D8B119007A1F94 /* PetserviceApiRouter.swift */; };
 		1A47542228D8CE3A007A1F94 /* AnimalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47542128D8CE3A007A1F94 /* AnimalTypes.swift */; };
 		1A67B89128D881B1004D0923 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1A67B89028D881B1004D0923 /* Podfile */; };
-		3C4579BFB8763A1A902B7DB6 /* Pods_PetFinder_PetFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA7BC98E53E6F20A0B648B5 /* Pods_PetFinder_PetFinderUITests.framework */; };
 		3E874C49BCAFE1D5DFCE2F22 /* Pods_PetFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D98B54577B50343194C207 /* Pods_PetFinderTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1A1238B628D87205001740F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1A12389728D87204001740F0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1A12389E28D87204001740F0;
-			remoteInfo = PetFinder;
-		};
-		1A1238C028D87205001740F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1A12389728D87204001740F0 /* Project object */;
 			proxyType = 1;
@@ -62,10 +51,6 @@
 		1A1238AE28D87205001740F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1238B028D87205001740F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A1238B528D87205001740F0 /* PetFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A1238B928D87205001740F0 /* PetFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderTests.swift; sourceTree = "<group>"; };
-		1A1238BF28D87205001740F0 /* PetFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A1238C328D87205001740F0 /* PetFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITests.swift; sourceTree = "<group>"; };
-		1A1238C528D87205001740F0 /* PetFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1A1238D228D87249001740F0 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		1A30C79628FEC72500FAB9C1 /* AnimalTypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTypeViewModel.swift; sourceTree = "<group>"; };
 		1A30C79928FED13000FAB9C1 /* AnimalTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTypeCell.swift; sourceTree = "<group>"; };
@@ -114,14 +99,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A1238BC28D87205001740F0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C4579BFB8763A1A902B7DB6 /* Pods_PetFinder_PetFinderUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,7 +108,6 @@
 				1A1238D228D87249001740F0 /* Readme.md */,
 				1A1238A128D87204001740F0 /* PetFinder */,
 				1A1238B828D87205001740F0 /* PetFinderTests */,
-				1A1238C228D87205001740F0 /* PetFinderUITests */,
 				1A1238A028D87204001740F0 /* Products */,
 				EC7672825E4A6683B06AA341 /* Pods */,
 				220E0878A5E3881619EC1E34 /* Frameworks */,
@@ -143,7 +119,6 @@
 			children = (
 				1A12389F28D87204001740F0 /* PetFinder.app */,
 				1A1238B528D87205001740F0 /* PetFinderTests.xctest */,
-				1A1238BF28D87205001740F0 /* PetFinderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,19 +141,9 @@
 		1A1238B828D87205001740F0 /* PetFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				1A1238B928D87205001740F0 /* PetFinderTests.swift */,
 				1A30C7A928FF1DB000FAB9C1 /* PetFinderServiceConstantsTests.swift */,
 			);
 			path = PetFinderTests;
-			sourceTree = "<group>";
-		};
-		1A1238C228D87205001740F0 /* PetFinderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1A1238C328D87205001740F0 /* PetFinderUITests.swift */,
-				1A1238C528D87205001740F0 /* PetFinderUITestsLaunchTests.swift */,
-			);
-			path = PetFinderUITests;
 			sourceTree = "<group>";
 		};
 		1A1238D328D87D5A001740F0 /* Common */ = {
@@ -350,26 +315,6 @@
 			productReference = 1A1238B528D87205001740F0 /* PetFinderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1A1238BE28D87205001740F0 /* PetFinderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1A1238CF28D87205001740F0 /* Build configuration list for PBXNativeTarget "PetFinderUITests" */;
-			buildPhases = (
-				CF5F865F42182FA7595B553F /* [CP] Check Pods Manifest.lock */,
-				1A1238BB28D87205001740F0 /* Sources */,
-				1A1238BC28D87205001740F0 /* Frameworks */,
-				1A1238BD28D87205001740F0 /* Resources */,
-				9F2FDCC28147B0B87A1A97E7 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1A1238C128D87205001740F0 /* PBXTargetDependency */,
-			);
-			name = PetFinderUITests;
-			productName = PetFinderUITests;
-			productReference = 1A1238BF28D87205001740F0 /* PetFinderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -384,10 +329,6 @@
 						CreatedOnToolsVersion = 14.0;
 					};
 					1A1238B428D87205001740F0 = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = 1A12389E28D87204001740F0;
-					};
-					1A1238BE28D87205001740F0 = {
 						CreatedOnToolsVersion = 14.0;
 						TestTargetID = 1A12389E28D87204001740F0;
 					};
@@ -411,7 +352,6 @@
 			targets = (
 				1A12389E28D87204001740F0 /* PetFinder */,
 				1A1238B428D87205001740F0 /* PetFinderTests */,
-				1A1238BE28D87205001740F0 /* PetFinderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -428,13 +368,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1A1238B328D87205001740F0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A1238BD28D87205001740F0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -481,45 +414,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetFinder/Pods-PetFinder-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F2FDCC28147B0B87A1A97E7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PetFinder-PetFinderUITests/Pods-PetFinder-PetFinderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PetFinder-PetFinderUITests/Pods-PetFinder-PetFinderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetFinder-PetFinderUITests/Pods-PetFinder-PetFinderUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF5F865F42182FA7595B553F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PetFinder-PetFinderUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E55F65FA29424FFCB5D8FDC2 /* [CP] Check Pods Manifest.lock */ = {
@@ -575,17 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A1238BA28D87205001740F0 /* PetFinderTests.swift in Sources */,
 				1A30C7AA28FF1DB000FAB9C1 /* PetFinderServiceConstantsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A1238BB28D87205001740F0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A1238C628D87205001740F0 /* PetFinderUITestsLaunchTests.swift in Sources */,
-				1A1238C428D87205001740F0 /* PetFinderUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,11 +480,6 @@
 			isa = PBXTargetDependency;
 			target = 1A12389E28D87204001740F0 /* PetFinder */;
 			targetProxy = 1A1238B628D87205001740F0 /* PBXContainerItemProxy */;
-		};
-		1A1238C128D87205001740F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1A12389E28D87204001740F0 /* PetFinder */;
-			targetProxy = 1A1238C028D87205001740F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -830,44 +709,6 @@
 			};
 			name = Release;
 		};
-		1A1238D028D87205001740F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27B9B209C27B02866B3EE0F9 /* Pods-PetFinder-PetFinderUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V427YLBNBU;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmaronde.PetFinderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PetFinder;
-			};
-			name = Debug;
-		};
-		1A1238D128D87205001740F0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB6FD319401E20B860042892 /* Pods-PetFinder-PetFinderUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V427YLBNBU;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmaronde.PetFinderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PetFinder;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -894,15 +735,6 @@
 			buildConfigurations = (
 				1A1238CD28D87205001740F0 /* Debug */,
 				1A1238CE28D87205001740F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1A1238CF28D87205001740F0 /* Build configuration list for PBXNativeTarget "PetFinderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1A1238D028D87205001740F0 /* Debug */,
-				1A1238D128D87205001740F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -26,7 +26,8 @@ class HomeViewController: UITableViewController {
     // MARK: - API
     
     private func fetchAnimalTypes() {
-        PetfinderAPIManager.shared.fetchAnimalTypes { animalTypes in
+        let apiManager = PetfinderAPIManager()
+        apiManager.fetchAnimalTypes { animalTypes in
             guard let animalTypes = animalTypes else { return }
             self.animalTypes = animalTypes.types
         }

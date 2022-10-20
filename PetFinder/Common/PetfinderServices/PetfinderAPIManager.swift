@@ -34,12 +34,14 @@ import Foundation
 import Alamofire
 
 class PetfinderAPIManager {
-    static let shared = PetfinderAPIManager()
-    let sessionManager: Session = {
-        let configuration = URLSessionConfiguration.af.default
-        configuration.timeoutIntervalForRequest = 30
-        return Session(configuration: configuration)
-    }()
+    
+    private let sessionManager: Session
+    private let configuration = URLSessionConfiguration.af.default
+    
+    init(sessionManager: Session = Session.default) {
+        self.sessionManager = sessionManager
+        self.configuration.timeoutIntervalForRequest = 30
+    }
     
     func fetchAccessToken(completion: @escaping (Bool) -> Void) {
         let headers: HTTPHeaders = [

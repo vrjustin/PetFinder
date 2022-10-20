@@ -74,8 +74,197 @@ final class PetfinderAPIManagerTests: XCTestCase {
             expectation.fulfill()
         }
 
+        self.wait(for: [expectation], timeout: 1)
+        
+    }
+    
+    func test_PetfinderAPIManager_fetchAnimalTypes_givenAStoredToken_Validate_ReturnsArrayOfAnimalTypes() {
+        
+        let jsonStubData = """
+        {
+            "types": [
+                {
+                    "name": "Dog",
+                    "coats": [
+                        "Hairless",
+                        "Short"
+                    ],
+                    "colors": [
+                        "Black",
+                        "White"
+                    ],
+                    "genders": [
+                        "Male",
+                        "Female"
+                    ]
+                }
+            ]
+        }
+        """.data(using: .utf8)
+        MockURLProtocol.stubResponseData = jsonStubData
+        TokenManager.shared.saveAccessToken(accessToken: PetfinderAccessToken(accessToken: "someToken", tokenType: "Bearer"))
+        let expectation = XCTestExpectation(description: "fetchAnimalTypes expected response")
+        
+        sut.fetchAnimalTypes { animalTypes in
+            XCTAssertNotNil(animalTypes)
+            expectation.fulfill()
+        }
+        
+        self.wait(for: [expectation], timeout: 45.0)
+    }
+    
+    func test_PetfinderAPIManager_fetchAnimalTypes_givenNoStoredToken_Validate_ReturnsNil() {
+        
+        let jsonStubData = """
+        {
+            "types": [
+                {
+                    "name": "Dog",
+                    "coats": [
+                        "Hairless",
+                        "Short"
+                    ],
+                    "colors": [
+                        "Black",
+                        "White"
+                    ],
+                    "genders": [
+                        "Male",
+                        "Female"
+                    ]
+                }
+            ]
+        }
+        """.data(using: .utf8)
+        MockURLProtocol.stubResponseData = jsonStubData
+        let expectation = XCTestExpectation(description: "fetchAnimalTypes expected failed response")
+        
+        sut.fetchAnimalTypes { animalTypes in
+            XCTAssertNil(animalTypes, "The fetchAnimalTypes DID not return nil - despite having no stored token in TokenManager")
+            expectation.fulfill()
+        }
+        
+        self.wait(for: [expectation], timeout: 45.0)
+    }
+    
+    func test_PetfinderAPIManager_fetchAnimalTypes_errorsWhenInvalidResponseDecoding() {
+        let jsonStubData = """
+        {
+            "invalid_types": [
+                {
+                    "invalid_name": "Dog",
+                    "coats": [
+                        "Hairless",
+                        "Short"
+                    ],
+                    "invalid_colors": [
+                        "Black",
+                        "White"
+                    ],
+                    "genders": [
+                        "Male",
+                        "Female"
+                    ]
+                }
+            ]
+        }
+        """.data(using: .utf8)
+        MockURLProtocol.stubResponseData = jsonStubData
+        TokenManager.shared.saveAccessToken(accessToken: PetfinderAccessToken(accessToken: "someToken", tokenType: "Bearer"))
+
+        let expectation = XCTestExpectation(description: "fetchAnimalTypes expected failed response")
+        
+        sut.fetchAnimalTypes { animalTypes in
+            XCTAssertNil(animalTypes, "The fetchAnimalTypes DID not return nil - The decoding of AnimalTypes succeeded and should not have despite having invalid decodable json.")
+            expectation.fulfill()
+        }
+        
         self.wait(for: [expectation], timeout: 45.0)
         
+        
+    }
+    
+    func test_PetfinderAPIManager_fetchBreedsForAnimal_givenAStoredToken_Validate_ReturnsArrayOfAnimalBreeds() {
+        
+        let jsonStubData = """
+            {
+                "breeds": [
+                    {
+                        "name": "Affenpinscher"
+                    },
+                    {
+                        "name": "American Bulldog"
+                    }
+                ]
+            }
+            """.data(using: .utf8)
+    
+        MockURLProtocol.stubResponseData = jsonStubData
+        TokenManager.shared.saveAccessToken(accessToken: PetfinderAccessToken(accessToken: "someToken", tokenType: "Bearer"))
+        let expectation = XCTestExpectation(description: "fetchAnimalBreeds expected response")
+        
+        let dogAnimal = AnimalType(name: "Dog", coats: [], colors: [], genders: [])
+        sut.fetchBreedsForAnimal(dogAnimal) { breeds in
+            XCTAssertNotNil(breeds)
+            expectation.fulfill()
+        }
+        
+        self.wait(for: [expectation], timeout: 45.0)
+        
+    }
+    
+    func test_PetfinderAPIManager_fetchBreedsForAnimal_givenNoStoredToken_Validate_ReturnsNil() {
+        let jsonStubData = """
+            {
+                "breeds": [
+                    {
+                        "name": "Affenpinscher"
+                    },
+                    {
+                        "name": "American Bulldog"
+                    }
+                ]
+            }
+            """.data(using: .utf8)
+    
+        MockURLProtocol.stubResponseData = jsonStubData
+        let expectation = XCTestExpectation(description: "fetchAnimalBreeds expected response")
+        
+        let dogAnimal = AnimalType(name: "Dog", coats: [], colors: [], genders: [])
+        sut.fetchBreedsForAnimal(dogAnimal) { breeds in
+            XCTAssertNil(breeds)
+            expectation.fulfill()
+        }
+        
+        self.wait(for: [expectation], timeout: 45.0)
+    }
+    
+    func test_PetfinderAPIManager_fetchBreedsForAnimal_errorsWhenInvalidResponseDecoding() {
+        let jsonStubData = """
+            {
+                "invalid_breeds": [
+                    {
+                        "name": "Affenpinscher"
+                    },
+                    {
+                        "name": "American Bulldog"
+                    }
+                ]
+            }
+            """.data(using: .utf8)
+    
+        MockURLProtocol.stubResponseData = jsonStubData
+        TokenManager.shared.saveAccessToken(accessToken: PetfinderAccessToken(accessToken: "someToken", tokenType: "Bearer"))
+
+        let expectation = XCTestExpectation(description: "fetchAnimalBreeds expected response")
+        
+        let dogAnimal = AnimalType(name: "Dog", coats: [], colors: [], genders: [])
+        sut.fetchBreedsForAnimal(dogAnimal) { breeds in
+            XCTAssertNil(breeds)
+            expectation.fulfill()
+        }
+        
+        self.wait(for: [expectation], timeout: 45.0)
     }
 
 }

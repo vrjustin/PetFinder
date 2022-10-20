@@ -57,5 +57,25 @@ final class PetfinderAPIManagerTests: XCTestCase {
 
         self.wait(for: [expectation], timeout: 45.0)
     }
+    
+    func test_PetfinderAPIManager_fetchAccessToken_errorsWhenInvalidResponseDecoding() {
+        let jsonStubData = """
+        {
+        "token_type": "Bearer",
+        "invalid_json_Key_for_access_token": "SomeNotRealJWTTokenForTesting"
+        }
+        """.data(using: .utf8)
+        
+        MockURLProtocol.stubResponseData = jsonStubData
+        let expectation = XCTestExpectation(description: "fetchToken failed response expectation")
+        
+        sut.fetchAccessToken { isSuccess in
+            XCTAssertFalse(isSuccess, "Decoding of PetfinderAccessToken should have failed with that JSON but did not!")
+            expectation.fulfill()
+        }
+
+        self.wait(for: [expectation], timeout: 45.0)
+        
+    }
 
 }

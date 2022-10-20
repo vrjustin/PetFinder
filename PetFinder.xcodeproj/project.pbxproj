@@ -64,6 +64,7 @@
 		1A30C7A728FEF9AE00FAB9C1 /* Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breeds.swift; sourceTree = "<group>"; };
 		1A30C7A928FF1DB000FAB9C1 /* PetFinderServiceConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderServiceConstantsTests.swift; sourceTree = "<group>"; };
 		1A30C8222900181300FAB9C1 /* AnimalTypeCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTypeCellTests.swift; sourceTree = "<group>"; };
+		1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PetfinderApiConfig.xcconfig; sourceTree = "<group>"; };
 		1A47540528D8AD62007A1F94 /* SecureStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
 		1A47540628D8AD62007A1F94 /* SecureStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
 		1A47540728D8AD62007A1F94 /* SecureStoreQueryable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureStoreQueryable.swift; sourceTree = "<group>"; };
@@ -192,6 +193,7 @@
 				1A1238B028D87205001740F0 /* Info.plist */,
 				1A1238AB28D87205001740F0 /* Assets.xcassets */,
 				1A1238AD28D87205001740F0 /* LaunchScreen.storyboard */,
+				1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -539,6 +541,7 @@
 /* Begin XCBuildConfiguration section */
 		1A1238C728D87205001740F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -599,6 +602,7 @@
 		};
 		1A1238C828D87205001740F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4753F228D88DE8007A1F94 /* PetfinderApiConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

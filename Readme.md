@@ -1,13 +1,15 @@
 #  PetFinder
 
-TODO: Where does the developer sign up for an apikey?
 You will need to have a developer api key in order to work on this project.
+
 To obtain the key:
+      
     visit: https://www.petfinder.com/developers/
     Signup as a developer and receive back CLIENT_ID & CLIENT_SECRET values.
     
 Create a local xcconfig file inside the PetFinder directory: 
-    someDir/PetFinder/PetfinderApiConfig.xcconfig
+    
+projectDir/PetFinder/PetfinderApiConfig.xcconfig
     
     example:
         //

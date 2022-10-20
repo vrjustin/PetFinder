@@ -78,3 +78,10 @@ extension BreedsViewController {
         return cell
     }
 }
+
+extension BreedsViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = AnimalsViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+}

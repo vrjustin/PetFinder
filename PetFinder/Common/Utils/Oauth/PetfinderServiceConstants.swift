@@ -36,5 +36,11 @@ enum PetfinderServiceConstants {
     static let clientID = Bundle.main.infoDictionary?["CLIENT_ID"] as! String
     static let clientSecret = Bundle.main.infoDictionary?["CLIENT_SECRET"] as! String
     static let grantType = "client_credentials"
+    
     static let authorizeURL = "https://api.petfinder.com/v2/oauth2/token"
+    static let getTypesURL = "https://api.petfinder.com/v2/types"
+    
+    static func getBreedsURLString(_ animalType: AnimalType) -> String {
+        return "\(getTypesURL)/\(animalType.name.lowercased())/breeds"
+    }
 }

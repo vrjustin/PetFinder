@@ -34,12 +34,14 @@ import Foundation
 import Alamofire
 
 class PetfinderAPIManager {
-    static let shared = PetfinderAPIManager()
-    let sessionManager: Session = {
-        let configuration = URLSessionConfiguration.af.default
-        configuration.timeoutIntervalForRequest = 30
-        return Session(configuration: configuration)
-    }()
+    
+    private let sessionManager: Session
+    private let configuration = URLSessionConfiguration.af.default
+    
+    init(sessionManager: Session = Session.default) {
+        self.sessionManager = sessionManager
+        self.configuration.timeoutIntervalForRequest = 30
+    }
     
     func fetchAccessToken(completion: @escaping (Bool) -> Void) {
         let headers: HTTPHeaders = [
@@ -67,14 +69,53 @@ class PetfinderAPIManager {
     }
     
     func fetchAnimalTypes(completion: @escaping (AnimalTypes?) -> Void) {
-        let url = "https://api.petfinder.com/v2/types"
-        sessionManager.request(url)
+        
+        guard let curToken = TokenManager.shared.fetchAccessToken() else {
+            completion(nil)
+            return
+        }
+        
+        let authHeader = "Bearer \(curToken)"
+        let headers: HTTPHeaders = [
+            "Authorization": authHeader
+        ]
+        
+        sessionManager.request(
+            PetfinderServiceConstants.getTypesURL,
+            method: .get,
+            headers: headers)
             .responseDecodable(of: AnimalTypes.self) { response in
                 guard let animalTypes = response.value else {
                     return completion(nil)
                 }
                 completion(animalTypes)
             }
+    }
+    
+    func fetchBreedsForAnimal(_ animal: AnimalType, completion: @escaping ([Breed]?) -> Void) {
+        
+        guard let curToken = TokenManager.shared.fetchAccessToken() else {
+            completion(nil)
+            return
+        }
+        
+        let authHeader = "Bearer \(curToken)"
+        let headers: HTTPHeaders = [
+            "Authorization": authHeader
+        ]
+        
+        sessionManager.request(
+            PetfinderServiceConstants.getBreedsURLString(animal),
+            method: .get,
+            headers: headers)
+            .responseDecodable(of: Breeds.self) { response in
+                guard let animalBreeds = response.value else {
+                    return completion(nil)
+                }
+                completion(animalBreeds.breeds)
+            }
+        
+        
     }
     
 }

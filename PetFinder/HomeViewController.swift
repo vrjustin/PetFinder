@@ -7,26 +7,69 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+private let animalTypesCellReuseIdentifier = "animalTypesCellReuseIdentifier"
+
+class HomeViewController: UITableViewController {
+    
+    private var animalTypes = [AnimalType]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "HomeView"
-        
-        let mainlabel = UILabel(frame: CGRect(x: 100, y: 100, width: 200, height: 60))
-        mainlabel.backgroundColor = UIColor.systemPink
-        mainlabel.text = "Welcome to your new Pet!"
-        self.view.addSubview(mainlabel)
-        
-        mainlabel.translatesAutoresizingMaskIntoConstraints = false
-        let horizontalConstraint = NSLayoutConstraint(item: mainlabel, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
-        let verticalConstraint = NSLayoutConstraint(item: mainlabel, attribute: .top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: .top, multiplier: 1, constant: 80)
-        let widthConstraint = NSLayoutConstraint(item: mainlabel, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 200)
-        let heightConstraint = NSLayoutConstraint(item: mainlabel, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 60)
-        NSLayoutConstraint.activate([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
-
-        
+        setupUI()
+        fetchAnimalTypes()
+    }
+    
+    // MARK: - API
+    
+    private func fetchAnimalTypes() {
+        let apiManager = PetfinderAPIManager()
+        apiManager.fetchAnimalTypes { animalTypes in
+            guard let animalTypes = animalTypes else { return }
+            self.animalTypes = animalTypes.types
+        }
+    }
+    
+    // MARK: - HELPERS
+    
+    private func setupUI() {
+        view.backgroundColor = .white
+        navigationItem.title = "Select The Animal Type to Start"
+        configureTableView()
+    }
+    
+    private func configureTableView() {
+        tableView.register(AnimalTypeCell.self, forCellReuseIdentifier: animalTypesCellReuseIdentifier)
+        tableView.rowHeight = 100
+        tableView.separatorStyle = .none
     }
 
 }
 
+// MARK: - TableView DataSource
+
+extension HomeViewController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return animalTypes.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: animalTypesCellReuseIdentifier, for: indexPath) as! AnimalTypeCell
+        let animalType = AnimalType(name: animalTypes[indexPath.row].name, coats: animalTypes[indexPath.row].coats, colors: animalTypes[indexPath.row].colors, genders: animalTypes[indexPath.row].genders)
+        cell.viewModel = AnimalTypeViewModel(animalType)
+        return cell
+    }
+}
+
+// MARK: - TableView Delegate
+
+extension HomeViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //TODO: Remove this temp routing..Not sure what we'll do yet. but now we'll just work on the getBreeds stuff.
+        let controller = BreedsViewController(BreedsViewModel(animal: animalTypes[indexPath.row]))
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+}

@@ -114,7 +114,36 @@ class PetfinderAPIManager {
                 }
                 completion(animalBreeds.breeds)
             }
+    }
+    
+    func fetchAnimalForSelectedBreed(requestModel: FetchAnimalRequestModel, completion: @escaping ([Animal]?) -> Void) {
         
+        guard let curToken = TokenManager.shared.fetchAccessToken() else {
+            completion(nil)
+            return
+        }
+        
+        let authHeader = "Bearer \(curToken)"
+        let headers: HTTPHeaders = [
+            "Authorization": authHeader
+        ]
+        
+        let parameters = [
+            "type": requestModel.animalType.name,
+            "breed": requestModel.breed.name
+        ]
+                
+        sessionManager.request(
+            PetfinderServiceConstants.animalsURL,
+            method: .get,
+            parameters: parameters,
+            headers: headers)
+            .responseDecodable(of: Animals.self) { response in
+                guard let animals = response.value else {
+                    return completion(nil)
+                }
+                completion(animals.animals)
+            }
         
     }
     

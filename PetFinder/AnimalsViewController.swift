@@ -8,9 +8,11 @@
 import Foundation
 import UIKit
 
-class AnimalsViewController: UITableViewController {
+class AnimalsViewController: UIViewController {
     
     // MARK: - LIFECYCLE
+    
+    private var animals = [Animal]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,24 @@ class AnimalsViewController: UITableViewController {
     // MARK: - API
     
     private func fetchAnimals() {
-        //TODO: CALL OUR fetchAnimals Service to be created.
+        let apiManager = PetfinderAPIManager()
+        //TODO: Remove the hardcoded test values
+        let testType = AnimalType(name: "Dog", coats: [], colors: [], genders: [])
+        let testBreed = Breed(name: "Australian Shepherd")
+        
+        //TODO GEt the Actual values to put into the requestModel from the viewModel
+        let requestModel = FetchAnimalRequestModel(animalType: testType, breed: testBreed)
+        
+        //END HARDCODING
+        
+        apiManager.fetchAnimalForSelectedBreed(requestModel: requestModel) { animals in
+            print("Do we have our animals")
+            if let animals = animals {
+                print(animals)
+            }
+        }
+        
+        
     }
     
     // MARK: - HELPERS

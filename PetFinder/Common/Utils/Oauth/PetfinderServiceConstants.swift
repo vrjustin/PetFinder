@@ -41,8 +41,10 @@ enum PetfinderServiceConstants {
     static let getTypesURL = "https://api.petfinder.com/v2/types"
     static let animalsURL = "https://api.petfinder.com/v2/animals"
     
-    static func getBreedsURLString(_ animalType: AnimalType) -> String {
-        return "\(getTypesURL)/\(animalType.name.lowercased())/breeds"
+    static func getBreedsURLString(_ animalType: AnimalType) -> String? {
+        guard let urlEncodedAnimalType = animalType.name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)?.lowercased() else { return nil }
+
+        return "\(getTypesURL)/\(urlEncodedAnimalType)/breeds"
     }
     
 }

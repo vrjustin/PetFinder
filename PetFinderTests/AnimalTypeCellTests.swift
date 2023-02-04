@@ -9,18 +9,30 @@ import XCTest
 @testable import PetFinder
 
 final class AnimalTypeCellTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    var cell: AnimalTypeCell!
+    
+    override func setUp() {
+        super.setUp()
+        cell = AnimalTypeCell()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        cell = nil
+        super.tearDown()
     }
 
     func test_AnimalTypeCell_InitWithCoder() {
-        let sut = AnimalTypeCell(coder: NSCoder())
-        XCTAssertNil(sut)
+        cell = AnimalTypeCell(coder: NSCoder())
+        XCTAssertNil(cell)
+    }
+    
+    func test_AnimalTypeCell_configure_setsImageAndLabel() {
+        let animalType = AnimalType(name: "Dog", coats: [], colors: [], genders: [])
+        let viewModel = AnimalTypeViewModel(animalType)
+        cell.viewModel = viewModel
+        
+        XCTAssertEqual(cell.animalTypeLabel.text, "Dog")
     }
 
 }

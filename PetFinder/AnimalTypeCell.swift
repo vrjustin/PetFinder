@@ -18,7 +18,7 @@ class AnimalTypeCell: UITableViewCell {
         }
     }
         
-    private let animalTypeImageView: UIImageView = {
+    internal let animalTypeImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
@@ -27,7 +27,7 @@ class AnimalTypeCell: UITableViewCell {
         return iv
     }()
     
-    private let animalTypeLabel: UILabel = {
+    internal let animalTypeLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 14)

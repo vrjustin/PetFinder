@@ -105,7 +105,7 @@ class PetfinderAPIManager {
         ]
         
         sessionManager.request(
-            PetfinderServiceConstants.getBreedsURLString(animal),
+            PetfinderServiceConstants.getBreedsURLString(animal)!,
             method: .get,
             headers: headers)
             .responseDecodable(of: Breeds.self) { response in

@@ -44,4 +44,7 @@ extension BreedViewModel {
     var name: String {
         return breed.name
     }
+    var currentBreed: Breed {
+        return breed
+    }
 }

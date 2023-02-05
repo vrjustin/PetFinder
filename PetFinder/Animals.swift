@@ -18,11 +18,15 @@ struct Animals: Decodable {
 struct Animal: Decodable {
     let id: Int
     let orgId: String
+    let name: String
+    let status: String
     let url: String
    
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case orgId = "organization_id"
+        case name = "name"
+        case status = "status"
         case url = "url"
     }
 }

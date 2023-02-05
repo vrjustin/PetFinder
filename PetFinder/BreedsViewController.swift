@@ -81,7 +81,10 @@ extension BreedsViewController {
 
 extension BreedsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = AnimalsViewController()
+        let selectedCell = tableView.cellForRow(at: indexPath) as? BreedCell
+        guard let selectedBreed = selectedCell?.viewModel?.currentBreed else { return }
+        let animalsViewModel = AnimalsViewModel(breed: selectedBreed, animalType: viewModel.currentAnimalType)
+        let controller = AnimalsViewController(animalsViewModel)
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

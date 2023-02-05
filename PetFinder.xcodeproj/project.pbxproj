@@ -38,6 +38,8 @@
 		1A5BD486290289ED00125738 /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BD485290289ED00125738 /* Animals.swift */; };
 		1A5BD48829028E1E00125738 /* FetchAnimalRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5BD48729028E1E00125738 /* FetchAnimalRequestModel.swift */; };
 		1A67B89128D881B1004D0923 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1A67B89028D881B1004D0923 /* Podfile */; };
+		1AC7DEFD298E80FF00BABB30 /* AnimalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DEFC298E80FF00BABB30 /* AnimalsViewModel.swift */; };
+		1AC7DF01298FCC8100BABB30 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DF00298FCC8100BABB30 /* AnimalCell.swift */; };
 		3E874C49BCAFE1D5DFCE2F22 /* Pods_PetFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D98B54577B50343194C207 /* Pods_PetFinderTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		1A5BD485290289ED00125738 /* Animals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animals.swift; sourceTree = "<group>"; };
 		1A5BD48729028E1E00125738 /* FetchAnimalRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAnimalRequestModel.swift; sourceTree = "<group>"; };
 		1A67B89028D881B1004D0923 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1AC7DEFC298E80FF00BABB30 /* AnimalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsViewModel.swift; sourceTree = "<group>"; };
+		1AC7DF00298FCC8100BABB30 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 		27B9B209C27B02866B3EE0F9 /* Pods-PetFinder-PetFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder-PetFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder-PetFinderUITests/Pods-PetFinder-PetFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		65C1EAF82CB872156C9431E7 /* Pods-PetFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinderTests/Pods-PetFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67D98B54577B50343194C207 /* Pods_PetFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +214,7 @@
 			children = (
 				1A30C79628FEC72500FAB9C1 /* AnimalTypeViewModel.swift */,
 				1A5BD47329019EBD00125738 /* BreedViewModel.swift */,
+				1AC7DEFC298E80FF00BABB30 /* AnimalsViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			children = (
 				1A30C79928FED13000FAB9C1 /* AnimalTypeCell.swift */,
 				1A5BD47129019D1900125738 /* BreedCell.swift */,
+				1AC7DF00298FCC8100BABB30 /* AnimalCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -517,10 +523,12 @@
 				1A47541928D8B119007A1F94 /* PetfinderAPIManager.swift in Sources */,
 				1A30C7A228FEEE8600FAB9C1 /* BreedsViewController.swift in Sources */,
 				1A5BD47429019EBD00125738 /* BreedViewModel.swift in Sources */,
+				1AC7DEFD298E80FF00BABB30 /* AnimalsViewModel.swift in Sources */,
 				1A47540A28D8AD62007A1F94 /* SecureStoreQueryable.swift in Sources */,
 				1A1238A328D87204001740F0 /* AppDelegate.swift in Sources */,
 				1A30C79A28FED13000FAB9C1 /* AnimalTypeCell.swift in Sources */,
 				1A47541228D8AE38007A1F94 /* TokenManager.swift in Sources */,
+				1AC7DF01298FCC8100BABB30 /* AnimalCell.swift in Sources */,
 				1A5BD48829028E1E00125738 /* FetchAnimalRequestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

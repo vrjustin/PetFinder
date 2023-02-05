@@ -63,9 +63,7 @@ class AnimalTypeCell: UITableViewCell {
     private func configure() {
         guard let viewModel = viewModel else { return }
         
-        let placeHolderImage = UIImage(named: "DogImage-Placeholder")
-        animalTypeImageView.image = placeHolderImage
-        
+        animalTypeImageView.image = viewModel.image
         animalTypeLabel.text = viewModel.name
     }
 }

@@ -26,4 +26,8 @@ projectDir/PetFinder/PetfinderApiConfig.xcconfig
 
     The file should never be included in the source code and is currently already included in our global .gitignore
     
-
+Credit to:
+Vitaly Gorbachev - Cat Icon
+deemakaksina - Dog Icon
+Freepik - Rabbit, Horse, Bird, Cow, Guinea Pig Icons
+Those Icons - Fish Icon

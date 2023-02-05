@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct AnimalTypesViewModel {
     let animalTypes: [AnimalType]
@@ -38,5 +39,34 @@ extension AnimalTypeViewModel {
 extension AnimalTypeViewModel {
     var name: String {
         return animalType.name
+    }
+    var image: UIImage {
+        var animalTypeImage: UIImage
+        
+        switch animalType.name.lowercased() {
+        case "dog":
+            animalTypeImage = UIImage(named: "dog")!
+        case "cat":
+            animalTypeImage = UIImage(named: "cat")!
+        case "rabbit":
+            animalTypeImage = UIImage(named: "rabbit")!
+        case "small & furry":
+            animalTypeImage = UIImage (named: "guinea-pig")!
+        case "horse":
+            animalTypeImage = UIImage(named: "horse")!
+        case "bird":
+            animalTypeImage = UIImage(named: "bird")!
+        case "scales, fins & other":
+            animalTypeImage = UIImage(named: "fish")!
+        case "barnyard":
+            animalTypeImage = UIImage(named: "cow")!
+        
+        default:
+            print("Still Images for: \(animalType.name)")
+            animalTypeImage = UIImage(named: "dog")!
+        }
+        
+        
+        return animalTypeImage
     }
 }

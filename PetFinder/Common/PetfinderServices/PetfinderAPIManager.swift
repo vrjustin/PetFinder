@@ -130,7 +130,9 @@ class PetfinderAPIManager {
         
         let parameters = [
             "type": requestModel.animalType.name,
-            "breed": requestModel.breed.name
+            "breed": requestModel.breed.name,
+            "location": requestModel.location,
+            "distance": requestModel.distance,
         ]
                 
         sessionManager.request(

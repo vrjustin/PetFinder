@@ -11,5 +11,7 @@ struct FetchAnimalRequestModel {
     
     let animalType: AnimalType
     let breed: Breed
+    let location: String
+    let distance: String
     
 }

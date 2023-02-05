@@ -16,9 +16,11 @@ struct Animals: Decodable {
 }
 
 struct Animal: Decodable {
-    let id: Int
+    let id: Double
     let orgId: String
     let name: String
+    let description: String
+    let photos: [[String:String]]
     let status: String
     let url: String
    
@@ -26,7 +28,11 @@ struct Animal: Decodable {
         case id = "id"
         case orgId = "organization_id"
         case name = "name"
+        case description = "description"
+        case photos = "photos"
         case status = "status"
         case url = "url"
     }
 }
+
+

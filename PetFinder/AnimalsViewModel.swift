@@ -7,6 +7,7 @@
 
 import Foundation
 
+// ANIMALS
 struct AnimalsViewModel {
     private let breed: Breed
     private let animalType: AnimalType
@@ -29,6 +30,7 @@ extension AnimalsViewModel {
     }
 }
 
+// ANIMAL
 struct AnimalViewModel {
     private let animal: Animal
 }
@@ -40,10 +42,23 @@ extension AnimalViewModel {
 }
 
 extension AnimalViewModel {
+    var animalId: String {
+        return String(animal.id)
+    }
     var name: String {
         return animal.name
     }
     var adoptableStatus: String {
         return animal.status
+    }
+    var currentAnimal: Animal {
+        return self.animal
+    }
+    var photos: [[String:String]] {
+        return self.animal.photos
+    }
+    var smallPhoto: String? {
+        //TODO: Improve this..
+        return self.animal.photos[0]["small"]
     }
 }

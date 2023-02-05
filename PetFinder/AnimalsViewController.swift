@@ -24,7 +24,12 @@ class AnimalsViewController: UITableViewController {
             //Each cell, AnimalCell should have a UIImageView with a placeholder image of anything already in the project.
             //there should be the name of the animal, which we have. It should have a label for the status, which we have.
 //            PetFinder.Animal(id: 59836948, orgId: "MA106", name: "Gus", status: "adoptable", url: "https://www.petfinder.com/small-furry/gus-59836948/ma/lowell/lowell-humane-society-ma106/?referrer_id=342c3a29-97ab-44e0-91cb-cccd90e35b41")
-            tableView.reloadData()
+            if animals.count > 0 {
+                tableView.reloadData()
+            }
+            
+            print("-----------NO ANIMALS!!!!!!!!!!")
+            
         }
     }
     
@@ -93,6 +98,18 @@ extension AnimalsViewController {
         cell.viewModel = AnimalViewModel(withAnimal: animal)
         
         return cell
+    }
+    
+}
+
+extension AnimalsViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath) as? AnimalCell
+        guard let animalViewModel = selectedCell?.viewModel else { return }
+        
+        let controller = AnimalDetailsViewController(animalViewModel)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }

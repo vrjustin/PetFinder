@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class AnimalCell: UITableViewCell {
     
@@ -17,6 +19,16 @@ class AnimalCell: UITableViewCell {
             configure()
         }
     }
+    
+    private let smallImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+        iv.backgroundColor = .yellow
+        
+        iv.image = UIImage(named: "DogImage-Placeholder")
+        return iv
+    }()
     
     private let animalNameLabel: UILabel = {
         let label = UILabel()
@@ -53,13 +65,17 @@ class AnimalCell: UITableViewCell {
         //TODO: Remove Debugging color..
         contentView.backgroundColor = .cyan
         
+        contentView.addSubview(smallImageView)
+        smallImageView.setDimensions(height: 84, width: 84)
+        smallImageView.centerY(inView: contentView, leftAnchor: contentView.leftAnchor, paddingLeft: 8)
+        
         contentView.addSubview(animalNameLabel)
-        animalNameLabel.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, paddingLeft: 8)
+        animalNameLabel.anchor(top: contentView.topAnchor, left: smallImageView.rightAnchor, paddingTop: 8, paddingLeft: 8)
         contentView.addSubview(animalNameValueLabel)
-        animalNameValueLabel.anchor(top: contentView.topAnchor, left: animalNameLabel.rightAnchor, paddingLeft: 8)
+        animalNameValueLabel.anchor(top: contentView.topAnchor, left: animalNameLabel.rightAnchor, paddingTop: 8, paddingLeft: 8)
         
         contentView.addSubview(adoptableStatusValueLabel)
-        adoptableStatusValueLabel.anchor(top: contentView.topAnchor, right: contentView.rightAnchor, paddingRight: 8)
+        adoptableStatusValueLabel.anchor(top: animalNameLabel.bottomAnchor, left: smallImageView.rightAnchor, paddingLeft: 8)
         
     }
     
@@ -74,5 +90,16 @@ class AnimalCell: UITableViewCell {
         
         animalNameValueLabel.text = viewModel.name
         adoptableStatusValueLabel.text = viewModel.adoptableStatus
+        
+        ////move to a new function.
+        guard let imageURLStr = viewModel.smallPhoto else { return }
+        
+        AF.request(imageURLStr).responseImage { response in
+            if case .success(let image) = response.result {
+                self.smallImageView.image = image
+            }
+        }
+        ////
+        
     }
 }

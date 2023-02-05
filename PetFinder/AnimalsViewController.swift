@@ -101,15 +101,3 @@ extension AnimalsViewController {
     }
     
 }
-
-extension AnimalsViewController {
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell = tableView.cellForRow(at: indexPath) as? AnimalCell
-        guard let animalViewModel = selectedCell?.viewModel else { return }
-        
-        let controller = AnimalDetailsViewController(animalViewModel)
-        self.navigationController?.pushViewController(controller, animated: true)
-    }
-    
-}

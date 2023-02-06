@@ -27,7 +27,7 @@ class BreedCell: UITableViewCell {
         return iv
     }()
     
-    private let breedNameLabel: UILabel = {
+    internal let breedNameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 14)

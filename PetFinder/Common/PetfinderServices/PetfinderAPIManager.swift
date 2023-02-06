@@ -141,6 +141,9 @@ class PetfinderAPIManager {
             parameters: parameters,
             headers: headers)
             .responseDecodable(of: Animals.self) { response in
+                if let error = response.error {
+                    print("Decoding Error: \(error)")
+                }
                 guard let animals = response.value else {
                     return completion(nil)
                 }

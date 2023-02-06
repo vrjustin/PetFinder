@@ -40,6 +40,7 @@
 		1A67B89128D881B1004D0923 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1A67B89028D881B1004D0923 /* Podfile */; };
 		1AC7DEFD298E80FF00BABB30 /* AnimalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DEFC298E80FF00BABB30 /* AnimalsViewModel.swift */; };
 		1AC7DF01298FCC8100BABB30 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DF00298FCC8100BABB30 /* AnimalCell.swift */; };
+		1AC7DF0B29911EC800BABB30 /* BreedCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DF0A29911EC800BABB30 /* BreedCellTests.swift */; };
 		3E874C49BCAFE1D5DFCE2F22 /* Pods_PetFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D98B54577B50343194C207 /* Pods_PetFinderTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		1A67B89028D881B1004D0923 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1AC7DEFC298E80FF00BABB30 /* AnimalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsViewModel.swift; sourceTree = "<group>"; };
 		1AC7DF00298FCC8100BABB30 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		1AC7DF0A29911EC800BABB30 /* BreedCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCellTests.swift; sourceTree = "<group>"; };
 		27B9B209C27B02866B3EE0F9 /* Pods-PetFinder-PetFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder-PetFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder-PetFinderUITests/Pods-PetFinder-PetFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		65C1EAF82CB872156C9431E7 /* Pods-PetFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinderTests/Pods-PetFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67D98B54577B50343194C207 /* Pods_PetFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +167,7 @@
 				1A30C7A928FF1DB000FAB9C1 /* PetFinderServiceConstantsTests.swift */,
 				1A30C8222900181300FAB9C1 /* AnimalTypeCellTests.swift */,
 				1A5BD46A2901741C00125738 /* Common */,
+				1AC7DF0A29911EC800BABB30 /* BreedCellTests.swift */,
 			);
 			path = PetFinderTests;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC7DF0B29911EC800BABB30 /* BreedCellTests.swift in Sources */,
 				1A5BD46E2901743D00125738 /* MockURLProtocol.swift in Sources */,
 				1A30C7AA28FF1DB000FAB9C1 /* PetFinderServiceConstantsTests.swift in Sources */,
 				1A5BD470290176C600125738 /* PetfinderAPIManagerTests.swift in Sources */,

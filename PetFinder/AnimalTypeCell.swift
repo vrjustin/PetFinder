@@ -44,8 +44,8 @@ class AnimalTypeCell: UITableViewCell {
         contentView.backgroundColor = .green
         
         contentView.addSubview(animalTypeImageView)
-        animalTypeImageView.setDimensions(height: 48, width: 48)
-        animalTypeImageView.layer.cornerRadius = 48 / 2
+        animalTypeImageView.setDimensions(height: 50, width: 50)
+        animalTypeImageView.layer.cornerRadius = 50 / 2
         animalTypeImageView.centerY(inView: self.contentView)
         animalTypeImageView.anchor(left: contentView.leftAnchor, paddingLeft: 8)
         

@@ -10,10 +10,23 @@ import UIKit
 
 private let animalCellReuseIdentifier = "animalCellReuseIdentifier"
 
-class AnimalsViewController: UITableViewController {
+class AnimalsViewController: UIViewController {
     
     // MARK: - PROPERTIES
     var viewModel: AnimalsViewModel!
+    
+    private lazy var searchContainerView: UIView = {
+        let searchContainerView = UIView()
+        searchContainerView.backgroundColor = UIColor.red
+        return searchContainerView
+    }()
+    
+    private lazy var tableView: UITableView = {
+        let tv = UITableView()
+        tv.backgroundColor = .gray
+        tv.dataSource = self
+        return tv
+    }()
     
     private var animals = [Animal]() {
         didSet {
@@ -53,7 +66,7 @@ class AnimalsViewController: UITableViewController {
         
         //TODO: Remove hard-coded location & distance from location. These should come from the users's device location if allowed or
         //they should input the zip they want to search. And a Search distance.
-        let requestModel = FetchAnimalRequestModel(animalType: viewModel.currentAnimalType, breed: viewModel.currentAnimalBreed, location: "90210", distance: "25")
+        let requestModel = FetchAnimalRequestModel(animalType: viewModel.currentAnimalType, breed: viewModel.currentAnimalBreed, location: "48334", distance: "25")
                 
         apiManager.fetchAnimalForSelectedBreed(requestModel: requestModel) { animals in
             if let animals = animals {
@@ -69,30 +82,43 @@ class AnimalsViewController: UITableViewController {
     private func setupUI() {
         view.backgroundColor = .yellow
         navigationItem.title = "Results of Animals"
+        configureSearchView()
         configureTableView()
     }
     
+    private func configureSearchView() {
+        print("ok lets make a UIView at the top under the nav bar..")
+        
+        //TODO refactor this setup into a new View we can reuse.
+        self.view.addSubview(searchContainerView)
+        searchContainerView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor)
+        searchContainerView.setHeight(150)
+    }
+    
     private func configureTableView() {
+        self.view.addSubview(tableView)
         tableView.register(AnimalCell.self, forCellReuseIdentifier: animalCellReuseIdentifier)
         tableView.rowHeight = 100
         tableView.separatorStyle = .none
+        
+        tableView.anchor(top: searchContainerView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
     }
     
 }
 
-extension AnimalsViewController {
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension AnimalsViewController: UITableViewDataSource, UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return animals.count
     }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: animalCellReuseIdentifier, for: indexPath) as! AnimalCell
         let animal = animals[indexPath.row]
-        
+
         cell.viewModel = AnimalViewModel(withAnimal: animal)
-        
+
         return cell
     }
-    
+
 }

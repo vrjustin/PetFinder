@@ -84,8 +84,8 @@ class FilterViewController: UIViewController {
     
     @objc func sliderValueChanged(_ sender: UISlider) {
         let value = sender.value
-        print("OK What now - lets use this as our search parms back in the AnimalsViewController.")
-        //This means updating this viewModel that we have in this view controller. Then we have a didUpdate type function in the AVC that will update the search when the viewModel is updated.
+        //Send a notification to our observer that the value has changed.
+        NotificationCenter.default.post(name: AnimalsViewController.filterValueChanged, object: value)
     }
 
 

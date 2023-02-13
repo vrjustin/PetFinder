@@ -13,6 +13,7 @@ private let animalCellReuseIdentifier = "animalCellReuseIdentifier"
 class AnimalsViewController: UIViewController {
     
     // MARK: - PROPERTIES
+    static let filterValueChanged = Notification.Name("filterValueChanged")
     var viewModel: AnimalsViewModel!
     
     private lazy var tableView: UITableView = {
@@ -50,6 +51,11 @@ class AnimalsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         fetchAnimals()
+        setupObservers()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - API
@@ -96,6 +102,11 @@ class AnimalsViewController: UIViewController {
         tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
     }
     
+    private func setupObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleFilterValueChanged(_:)), name: AnimalsViewController.filterValueChanged, object: nil)
+
+    }
+    
     // MARK: - ACTIONS
 
     @objc func filterButtonTapped() {
@@ -105,6 +116,14 @@ class AnimalsViewController: UIViewController {
         filterVC.modalTransitionStyle = .coverVertical
         present(filterVC, animated: true)
     }
+    
+    @objc func handleFilterValueChanged(_ notification: Notification) {
+        if let value = notification.object as? Float {
+            // Update your AnimalsViewController with the new value
+            print("AnimalsVC received value: \(value)")
+        }
+    }
+
     
 }
 

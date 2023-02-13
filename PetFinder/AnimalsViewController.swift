@@ -15,12 +15,6 @@ class AnimalsViewController: UIViewController {
     // MARK: - PROPERTIES
     var viewModel: AnimalsViewModel!
     
-    private lazy var searchContainerView: UIView = {
-        let searchContainerView = UIView()
-        searchContainerView.backgroundColor = UIColor.red
-        return searchContainerView
-    }()
-    
     private lazy var tableView: UITableView = {
         let tv = UITableView()
         tv.backgroundColor = .gray
@@ -82,17 +76,15 @@ class AnimalsViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = .yellow
         navigationItem.title = "Results of Animals"
-        configureSearchView()
+        configureNavbar()
         configureTableView()
     }
     
-    private func configureSearchView() {
-        print("ok lets make a UIView at the top under the nav bar..")
-        
-        //TODO refactor this setup into a new View we can reuse.
-        self.view.addSubview(searchContainerView)
-        searchContainerView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor)
-        searchContainerView.setHeight(150)
+    private func configureNavbar() {
+        print("OK lets add a filter icon to the top right of the navbar..")
+        let filterButton = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal.decrease"), style: .plain, target: self, action: #selector(filterButtonTapped))
+
+        navigationItem.rightBarButtonItem = filterButton
     }
     
     private func configureTableView() {
@@ -101,7 +93,17 @@ class AnimalsViewController: UIViewController {
         tableView.rowHeight = 100
         tableView.separatorStyle = .none
         
-        tableView.anchor(top: searchContainerView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+        tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+    }
+    
+    // MARK: - ACTIONS
+
+    @objc func filterButtonTapped() {
+        print("Filter Button Tapped")
+        let filterVC = FilterViewController()
+        filterVC.modalPresentationStyle = .formSheet
+        filterVC.modalTransitionStyle = .coverVertical
+        present(filterVC, animated: true)
     }
     
 }

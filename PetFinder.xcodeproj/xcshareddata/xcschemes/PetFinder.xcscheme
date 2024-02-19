@@ -55,7 +55,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A1238BE28D87205001740F0"
+               BlueprintIdentifier = "1AEBD3AC2B83C100007B3517"
                BuildableName = "PetFinderUITests.xctest"
                BlueprintName = "PetFinderUITests"
                ReferencedContainer = "container:PetFinder.xcodeproj">

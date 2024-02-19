@@ -42,11 +42,20 @@
 		1AC7DF01298FCC8100BABB30 /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DF00298FCC8100BABB30 /* AnimalCell.swift */; };
 		1AC7DF0B29911EC800BABB30 /* BreedCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DF0A29911EC800BABB30 /* BreedCellTests.swift */; };
 		1AC7DF0D299A507200BABB30 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7DF0C299A507200BABB30 /* FilterViewController.swift */; };
+		1AEBD3B02B83C100007B3517 /* PetFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD3AF2B83C100007B3517 /* PetFinderUITests.swift */; };
+		1AEBD3B22B83C100007B3517 /* PetFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD3B12B83C100007B3517 /* PetFinderUITestsLaunchTests.swift */; };
 		3E874C49BCAFE1D5DFCE2F22 /* Pods_PetFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D98B54577B50343194C207 /* Pods_PetFinderTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1A1238B628D87205001740F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A12389728D87204001740F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A12389E28D87204001740F0;
+			remoteInfo = PetFinder;
+		};
+		1AEBD3B32B83C100007B3517 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1A12389728D87204001740F0 /* Project object */;
 			proxyType = 1;
@@ -94,6 +103,9 @@
 		1AC7DF00298FCC8100BABB30 /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 		1AC7DF0A29911EC800BABB30 /* BreedCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCellTests.swift; sourceTree = "<group>"; };
 		1AC7DF0C299A507200BABB30 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		1AEBD3AD2B83C100007B3517 /* PetFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AEBD3AF2B83C100007B3517 /* PetFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITests.swift; sourceTree = "<group>"; };
+		1AEBD3B12B83C100007B3517 /* PetFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		27B9B209C27B02866B3EE0F9 /* Pods-PetFinder-PetFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder-PetFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder-PetFinderUITests/Pods-PetFinder-PetFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		65C1EAF82CB872156C9431E7 /* Pods-PetFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PetFinderTests/Pods-PetFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67D98B54577B50343194C207 /* Pods_PetFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +135,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AEBD3AA2B83C100007B3517 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -132,6 +151,7 @@
 				1A1238D228D87249001740F0 /* Readme.md */,
 				1A1238A128D87204001740F0 /* PetFinder */,
 				1A1238B828D87205001740F0 /* PetFinderTests */,
+				1AEBD3AE2B83C100007B3517 /* PetFinderUITests */,
 				1A1238A028D87204001740F0 /* Products */,
 				EC7672825E4A6683B06AA341 /* Pods */,
 				220E0878A5E3881619EC1E34 /* Frameworks */,
@@ -143,6 +163,7 @@
 			children = (
 				1A12389F28D87204001740F0 /* PetFinder.app */,
 				1A1238B528D87205001740F0 /* PetFinderTests.xctest */,
+				1AEBD3AD2B83C100007B3517 /* PetFinderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,6 +337,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1AEBD3AE2B83C100007B3517 /* PetFinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1AEBD3AF2B83C100007B3517 /* PetFinderUITests.swift */,
+				1AEBD3B12B83C100007B3517 /* PetFinderUITestsLaunchTests.swift */,
+			);
+			path = PetFinderUITests;
+			sourceTree = "<group>";
+		};
 		220E0878A5E3881619EC1E34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +413,24 @@
 			productReference = 1A1238B528D87205001740F0 /* PetFinderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1AEBD3AC2B83C100007B3517 /* PetFinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AEBD3B52B83C100007B3517 /* Build configuration list for PBXNativeTarget "PetFinderUITests" */;
+			buildPhases = (
+				1AEBD3A92B83C100007B3517 /* Sources */,
+				1AEBD3AA2B83C100007B3517 /* Frameworks */,
+				1AEBD3AB2B83C100007B3517 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AEBD3B42B83C100007B3517 /* PBXTargetDependency */,
+			);
+			name = PetFinderUITests;
+			productName = PetFinderUITests;
+			productReference = 1AEBD3AD2B83C100007B3517 /* PetFinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -390,7 +438,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					1A12389E28D87204001740F0 = {
@@ -398,6 +446,10 @@
 					};
 					1A1238B428D87205001740F0 = {
 						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 1A12389E28D87204001740F0;
+					};
+					1AEBD3AC2B83C100007B3517 = {
+						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 1A12389E28D87204001740F0;
 					};
 				};
@@ -420,6 +472,7 @@
 			targets = (
 				1A12389E28D87204001740F0 /* PetFinder */,
 				1A1238B428D87205001740F0 /* PetFinderTests */,
+				1AEBD3AC2B83C100007B3517 /* PetFinderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -436,6 +489,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1A1238B328D87205001740F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AEBD3AB2B83C100007B3517 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -553,6 +613,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AEBD3A92B83C100007B3517 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AEBD3B22B83C100007B3517 /* PetFinderUITestsLaunchTests.swift in Sources */,
+				1AEBD3B02B83C100007B3517 /* PetFinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -560,6 +629,11 @@
 			isa = PBXTargetDependency;
 			target = 1A12389E28D87204001740F0 /* PetFinder */;
 			targetProxy = 1A1238B628D87205001740F0 /* PBXContainerItemProxy */;
+		};
+		1AEBD3B42B83C100007B3517 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A12389E28D87204001740F0 /* PetFinder */;
+			targetProxy = 1AEBD3B32B83C100007B3517 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -789,6 +863,51 @@
 			};
 			name = Release;
 		};
+		1AEBD3B62B83C100007B3517 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V427YLBNBU;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmaronde.PetFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PetFinder;
+			};
+			name = Debug;
+		};
+		1AEBD3B72B83C100007B3517 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V427YLBNBU;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmaronde.PetFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PetFinder;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -815,6 +934,15 @@
 			buildConfigurations = (
 				1A1238CD28D87205001740F0 /* Debug */,
 				1A1238CE28D87205001740F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AEBD3B52B83C100007B3517 /* Build configuration list for PBXNativeTarget "PetFinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AEBD3B62B83C100007B3517 /* Debug */,
+				1AEBD3B72B83C100007B3517 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

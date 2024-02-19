@@ -58,7 +58,6 @@ extension AnimalViewModel {
         return self.animal.photos
     }
     var smallPhoto: String? {
-        //TODO: Improve this..
-        return self.animal.photos[0]["small"]
+        return (!photos.isEmpty && photos[0]["small"] != nil) ? photos[0]["small"] : nil
     }
 }
